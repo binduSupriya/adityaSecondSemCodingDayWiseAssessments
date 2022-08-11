@@ -1,0 +1,19 @@
+int arrangeCoins(int n){
+    int step=1;
+    while(n>=step)
+    {
+        n=n-step;
+        step++;
+    }
+    return step-1;
+}
+
+
+
+/*
+Sample Input:
+8
+
+Sample Output:
+3
+*/
