@@ -1,0 +1,47 @@
+#include<stdio.h>
+int main()
+{
+	int n,i,j,flag=0;
+	scanf("%d",&n);
+	int a[n];
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	for(i=0;i<n;i++)
+	{
+		for(j=i+1;j<n;j++)
+		{
+			if(a[i]==a[j])
+			{
+				flag=1;
+				break;
+			}
+		}
+    }
+	if(flag==0)
+	{
+		printf("UNIQUE");
+	}
+	else
+	{
+		printf("DUPLICATE");
+	}
+	return 0;
+			
+}
+
+
+
+/*
+OUTPUT:
+
+5
+1 2 7 9 3
+UNIQUE
+
+
+5
+3 7 8 4 8
+DUPLICATE
+*/
