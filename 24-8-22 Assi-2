@@ -1,0 +1,31 @@
+#include<stdio.h>
+void main()
+{
+	int n,i,j;
+	printf("Enter n value :");
+	scanf("%d",&n);
+	int k=n;
+	for(i=1;i<=n;i++)
+	{
+		int temp=k;
+		for(j=1;j<=i;j++)
+		{
+			printf("%2d",temp);
+			temp--;
+		}
+		printf("\n");
+	}
+}
+
+
+
+/*
+OUTPUT:
+Enter n value :6
+ 6
+ 6 5
+ 6 5 4
+ 6 5 4 3
+ 6 5 4 3 2
+ 6 5 4 3 2 1
+*/ 
