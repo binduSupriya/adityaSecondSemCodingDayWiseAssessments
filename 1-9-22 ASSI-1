@@ -1,0 +1,26 @@
+#include<stdio.h>
+void main()
+{
+	int x,fp;
+	printf("Enter the number: ");
+	scanf("%d",&x);
+	fp=checkEvenorOdd(x);
+	if(fp==0)
+    	printf("even");
+	else
+		printf("odd");
+}
+int checkEvenorOdd(int x)
+{
+	if(x%2==0)
+		return(0);
+	else
+		return(1);
+}
+
+/*
+OUTPUT:
+	
+Enter the number: 22
+even
+*/
