@@ -1,0 +1,32 @@
+#include<stdio.h>
+void main()
+{
+	int n=5,i;
+	int a[n];
+	for(i=0;i<5;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	int len=n-1;
+	display(a,0,len);
+}
+void display(int a[],int start,int end)
+{
+	if(start>end)
+		return;
+	else
+		printf("%d\t",a[start]);
+		display(a,start+1,end);
+}
+
+/*
+OUTPUT:
+4
+
+1
+2
+3
+4
+
+4       1       2       3       4
+*/
