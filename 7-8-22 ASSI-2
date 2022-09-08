@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int i, count, *a,sum = 0;
+    scanf("%d", &count);
+    a = (int *)malloc(count * sizeof(int));
+    for (i = 0; i < count; i++)
+    {
+	        scanf("%d", a + i);
+	        sum += *(a + i);
+    }
+    printf(" %d ", sum);
+    return 0;
+}
