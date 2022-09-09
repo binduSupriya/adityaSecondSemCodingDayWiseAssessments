@@ -1,0 +1,91 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct new_node
+{
+	int data;
+	struct new_node *address;
+};
+
+struct new_node *head;
+
+void insertAtEnd();
+void display();
+void search();
+
+void main()
+{
+	insertAtEnd();
+	display();
+	insertAtEnd();
+	display();
+	insertAtEnd();
+	display();
+	insertAtEnd();
+	display();
+	insertAtEnd();
+	display();
+	search();
+}
+
+void insertAtEnd(){
+	struct new_node *node = (struct new_node*)malloc(sizeof(struct new_node));
+	
+	printf("\nEnter the value of the new node that you want to insert at the end : ");
+	scanf("%d",&node->data);
+	
+	node->address = NULL;
+	
+	if(head == NULL){
+		head = node;
+	}
+	else{
+		struct new_node *temp = head;
+		while(temp->address != NULL){
+			temp = temp->address;
+		}
+		temp->address = node;
+	}
+}
+
+void display()
+{
+	struct new_node *ptr;
+	ptr=head;
+	if(ptr==NULL)
+		printf(" There are no nodes in the list \n");
+	else
+	{
+		printf("Elements in the list are .... \n");
+		while(ptr!=NULL)
+		{
+			printf("%d ",ptr->data);
+			ptr=ptr->address;
+		}
+	}
+}
+
+void search()
+{
+	struct new_node *temp;
+	int element,flag=0;
+	printf("Enter the element to be searched: ");
+	scanf("%d",&element);
+	temp=head;
+	if(temp==NULL)
+		printf(" Element is not found in the list \n");
+	else
+	{
+		
+		while(temp!=NULL)
+		{
+			if(temp->data == element)
+				flag=1;
+			temp=temp->address;
+		}
+		if(flag)
+			printf("Element is found");
+		else
+			printf("Element is not found");
+	}
+}
